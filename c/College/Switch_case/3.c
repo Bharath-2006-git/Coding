@@ -6,7 +6,7 @@ int main()
   scanf(" %c",&ch);
   switch(ch)
   {
-    case 'a':
+    case ('a'):
     case 'A':
     case 'e':
     case 'E':
