@@ -13,3 +13,4 @@ int main(){
     }
     printf("Number of Zeros=%d\nNumber of Odds=%d\nNumber of Even=%d",zc,oc,ec);
 }
+

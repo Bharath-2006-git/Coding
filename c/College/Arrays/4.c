@@ -1,0 +1,1 @@
+// To find second maxium and minimum in given array of n elements

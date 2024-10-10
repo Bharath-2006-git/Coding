@@ -1,0 +1,1 @@
+// To accept the cgpa of n students and find the maximum and minimum cgpa 
