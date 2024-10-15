@@ -1,3 +1,5 @@
+// To implement linear search for the array of n given elements
+
 #include<stdio.h>
 
 int main() {
@@ -20,3 +22,5 @@ int main() {
     printf("Element not found\n");
     return 0;  
 }
+
+
