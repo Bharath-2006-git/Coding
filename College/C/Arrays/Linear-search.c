@@ -16,11 +16,11 @@ int main() {
     for (i = 0; i < n; i++) {
         if (e[i] == x) {
             printf("Element found at index %d\n", i);
-            return 0;  
+            return 0;
         }
     }
     printf("Element not found\n");
-    return 0;  
+    
 }
 
 
