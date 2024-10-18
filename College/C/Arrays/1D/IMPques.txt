@@ -1,0 +1,41 @@
+Basic Level
+
+To create an array. Input the array and display the array in regular order and in reverse order 
+To Find sum and average of array of n given elements
+Find the maximum and minimum from the array of n given elements
+Linear search 
+Binary search 
+Bubble sort
+Counting number of even elements and odd elements in given array
+Counting number of positive, negative and zero elements in given array
+Copying elements from one array to another array 
+Find the square root of each element in given array and store in another array
+
+
+Intermediate Level
+
+Find second max and min in given array
+Find mean, median, mode of given array
+Insert an element into an array at a given index
+To delete given element and decrement size of array  
+To delete the element whose index is given
+To find number of duplicate elements and which element is duplicated in the given array 
+To display the element which is duplicated maximum number of times
+To find sum of all prime numbers stored in prime index
+To sort all even index elements separately and all odd index elements separately 
+*Find the duplicated element in array and make it half as many times as it is duplicated
+and display those elements who are converted to zero at the end*
+
+Hard
+
+To sort the array with respect to sum of the digits of each element 
+To find the element which is duplicated max number of time continously 
+(11212122211 so answer is 2 as it is duplicated 3 times)
+To generate secret pin from array of n elements(Secret pin is 4 digit number)
+Consider two arrays where first array contains age and second array contains insurance 
+premium (in lakhs). Whose age is more there premium is more ( Don't use sorting)
+To generate secret pin from n given elements (Secret pin is a three digit number)
+sum of all even index elements is first digit and sum of all even element is 2 digit and remaaining sum 
+is third digit. (If number is multidigit make it single digit by adding them again - 129=1+2+9=12=1+2=3)
+
+
