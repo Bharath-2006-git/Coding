@@ -1,1 +1,2 @@
-// Find the difference between max and min 
+// Find the difference and sum between max and min 
+
