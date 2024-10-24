@@ -1,13 +1,12 @@
 #include<stdio.h>
 int mod(int x,int y){
-    return x%y;
+    printf("%d",x%y);
+    return 0;
 }
 int main(){
     int a,b;
     printf("Enter two numbers : ");
     scanf("%d%d",&a,&b);
-    int r=mod(a,b);
-    printf("%d",r);
-
+    mod(a,b);
 
 }
