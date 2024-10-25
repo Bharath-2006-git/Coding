@@ -18,3 +18,4 @@ int main(){
     scanf("%d%d%d",&a,&b,&c);
     printf("Maximun of three numbers : %d",max(a,b,c));
 }
+
