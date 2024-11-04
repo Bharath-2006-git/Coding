@@ -1,0 +1,1 @@
+// To find sum of the digits of the given number
