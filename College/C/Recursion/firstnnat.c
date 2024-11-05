@@ -1,7 +1,6 @@
 // To find sum of first n natural numbers
 #include <stdio.h>
 
-// Function to calculate the sum of first n natural numbers
 int sumOfNaturalNumbers(int n) {
     if (n == 1)
         return 1;
