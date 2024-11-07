@@ -1,0 +1,15 @@
+Q1.  To count number of vowels in a given string.
+Q2.  To count number of words in a given string.
+Q3.  To count number of lowercases, uppercases, digits and special symbols in 
+     given email id.
+Q4.  To check whether the given string is palindrome or not.
+Q5.  To convert each alphabet from lowercase to uppercase and vice versa.
+Q6.  To encrypt the given the given string (if letter is vowel substitute with previous letter
+     and if its a consonant substitute next letter
+     eg: telugu -> udmtht).
+Q7.  To ask the user to enter first name and last name and display together as a name.
+Q8.  To display the given sentance in reverse order with respect to words.
+     (My name is Raj -> Raj is name My).
+Q9.  To display the given sentance in reverse order with respect to letter.
+     (My name is Raj -> yM eman si jaR).
+Q10. To sort array of names.
