@@ -1,1 +1,0 @@
-// To define a structure person having name, bmi( height (feet, inches), weight)
