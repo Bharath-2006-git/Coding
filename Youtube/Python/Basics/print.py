@@ -1,0 +1,7 @@
+print("Hello,6,7")
+print("Hello",6,7)
+print("Hello",6,7,sep="~")
+print("Hello",6,7,sep="~",end="yo")
+print("Hi")
+print("Hello",6,7,sep="~",end="yo\n")
+print("Hi")
