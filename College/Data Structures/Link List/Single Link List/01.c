@@ -12,7 +12,7 @@ void creation() {
     scanf("%d", &n);
     while (n > 0) {
         f = (struct node *)malloc(sizeof(struct node));
-        printf("\nEnter the data: \n");
+        printf("Enter the data: ");
         scanf("%d", &f->data);
         f->l = NULL;
         if (head == NULL) {
