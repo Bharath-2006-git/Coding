@@ -37,6 +37,10 @@ void track2() {
 
 void display1() {
     t1 = head1;
+    if(head1==NULL){
+        printf("Track is empty");
+        return;
+    }
     printf("Compartments in Track 1 are: ");
     while (t1 != NULL) {
         printf("%d ", t1->data);
@@ -49,7 +53,7 @@ void display2() {
 
     t2 = head2;
     if(head2==NULL){
-        printf("Track merged to Track 1\n");
+        printf("Track merged to Track 1 or track is empty\n");
         return;
     }
     printf("Compartments in Track 2 are: ");
