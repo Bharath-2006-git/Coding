@@ -10,7 +10,7 @@ void creation() {
     int n;
     printf("Enter the number of elements: ");
     scanf("%d", &n);
-    while (n > 0) {
+    while (n > 0) { 
         f = (struct node *)malloc(sizeof(struct node));
         printf("Enter the data: ");
         scanf("%d", &f->data);
