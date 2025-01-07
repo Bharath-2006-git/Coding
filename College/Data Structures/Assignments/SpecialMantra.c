@@ -1,17 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-struct spell {
-    char alpha[20];
-    struct spell *l;
+struct mantra {
+    int symbol;
+    struct mantra *l;
 } *f, *t, *head = NULL;
 
-typedef struct spell spell;
+typedef struct mantra mantra;
 
 void creation() {
-    f = (spell *)malloc(sizeof(spell));
-    printf("Enter alphabet: ");
-    scanf("%s", &f->alpha);
+    f = (mantra *)malloc(sizeof(mantra));
+    printf("Enter symbol: ");
+    scanf("%d", &f->symbol);
     f->l = NULL;
     if (head == NULL) {
         head = f;
@@ -23,13 +23,13 @@ void creation() {
 
 void display() {
     if (head == NULL) {
-        printf("No magic word is present\n");
+        printf("No symbol are present\n");
         return;
     }
     t = head;
-    printf("Magic Word : ");
+    printf("Symbols : ");
     while (t != NULL) {
-        printf("%s", t->alpha);
+        printf("%d ", t->symbol);
         t = t->l;
     }
     printf("\n");
@@ -37,7 +37,7 @@ void display() {
 
 int main() {
     int ch;
-    printf("1. Insert Magic Spell letter\n2. Display Magic word\n3. isMagical\n4. Exit(0)\n");
+    printf("1. Insert\n2. Display\n3. Sort\n4. Exit(0)\n");
     while (1) {
         printf("\nEnter Choice: ");
         scanf("%d", &ch);
@@ -49,7 +49,7 @@ int main() {
                 display();
                 break;
             // case 3:
-            //     isMagical();
+            //     sort();
             //     break;
             case 4:
                 printf("Program Exited.\n");
