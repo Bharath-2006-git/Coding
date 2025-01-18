@@ -82,7 +82,7 @@ void insertpos() {
         f = t;
         t = t->rl;
         c++;
-    }
+    }   
     f->rl = f1;
     f1->ll = t;
     f1->rl=t;

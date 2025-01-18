@@ -53,6 +53,7 @@ void insertend() {
     f1->l = NULL;
 }
 
+
 void insertpos() {
     int p, c = 1;
     struct node *f1;
