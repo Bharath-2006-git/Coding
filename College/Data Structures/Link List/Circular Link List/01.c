@@ -40,11 +40,11 @@ void Insertbegin() {
     f1 = (struct node *)malloc(sizeof(struct node));
     printf("Enter the data: ");
     scanf("%d", &f1->data);
-        f1->l = head;
         t = head;
         while (t->l != head) {
             t = t->l; 
         }
+        f1->l = head;
         t->l = f1;
         head = f1; 
 }
