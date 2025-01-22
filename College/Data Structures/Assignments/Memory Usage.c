@@ -61,7 +61,7 @@ void findMinMax() {
 
 int main() {
     int ch;
-    printf("1. Create new memory usage\n2. Display memory usage\n3. Get minimum and maximum memory usage\n4. Exit(0)\n");
+    printf("1. Create new memory usage\n2. Display memory usage\n3. Get minimum and maximum memory usage\n4. Exit\n");
     while (1) {
         printf("\nEnter Choice: ");
         scanf("%d", &ch);
