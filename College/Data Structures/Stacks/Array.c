@@ -17,16 +17,6 @@ void push() {
     }
 }
 
-void pop() {
-    if (top == -1) {
-        printf("Stack underflow\n");
-    } else {
-        x = s[top--];
-        printf("Popped element is: %d\n", x);
-        display();
-    }
-}
-
 void display() {
     if (top == -1) {
         printf("Stack is empty\n");
@@ -38,6 +28,18 @@ void display() {
         printf("\n");
     }
 }
+
+
+void pop() {
+    if (top == -1) {
+        printf("Stack underflow\n");
+    } else {
+        x = s[top--];
+        printf("Popped element is: %d\n", x);
+        display();
+    }
+}
+
 
 void peek() {
     if (top == -1) {
