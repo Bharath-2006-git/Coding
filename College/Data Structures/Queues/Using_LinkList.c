@@ -4,7 +4,7 @@
 struct node{
     int data;
     struct node *l;
-}*f,*t,*front,*rear;
+}*f,*t,*front=NULL,*rear=NULL;
 
 void enqueue(int x){
     f=(struct node *)malloc(sizeof(struct node));
