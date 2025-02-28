@@ -34,7 +34,7 @@ int main() {
     printf("\n1. Insert\n2. Display\n3. Exit\n");
     int ch;
     while (1) {
-        printf("Enter choice: ");
+        printf("\nEnter choice: ");
         scanf("%d", &ch);
         switch (ch) {
             case 1:
