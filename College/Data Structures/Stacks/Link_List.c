@@ -15,7 +15,7 @@ void push(){
     t->l=top;
     top=t;
 }
-
+    
 void display(){
     t=top;
     printf("Stack elements are: ");
