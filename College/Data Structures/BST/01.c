@@ -101,12 +101,12 @@ void postorder(struct node *root) {
 }
 
 int main() {
-    struct node *root, *t;
+    struct node *root, *t, *minNode;
     int ch, x, a;
     printf("\nEnter the data to insert: ");
     scanf("%d", &x);
     root = new_node(x);
-    printf("\n1. Insertion\n2. Inorder\n3. Preorder\n4. Postorder\n5. Deletion\n6. Search\n7. Exit");
+    printf("\n1. Insertion\n2. Inorder\n3. Preorder\n4. Postorder\n5. Deletion\n6. Search\n7. Find Minimum\n8. Exit");
 
     while(1) {
         printf("\nEnter your choice: ");
@@ -115,7 +115,7 @@ int main() {
             case 1:
                 printf("\nEnter the root data to insert: ");
                 scanf("%d", &x);
-                insert(root, x);
+                root = insert(root, x);
                 break;
             case 2:
                 printf("\nInorder traversal:\n");
@@ -148,6 +148,13 @@ int main() {
                     printf("\nElement found!!\n");
                 break;
             case 7:
+                minNode = find_minimum(root);
+                if(minNode != NULL)
+                    printf("\nMinimum element in the BST: %d\n", minNode->data);
+                else
+                    printf("\nThe BST is empty.\n");
+                break;
+            case 8:
                 exit(0);
         }
     }
