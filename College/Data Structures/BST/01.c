@@ -3,103 +3,153 @@
 
 struct node {
     int data;
-    struct node* right;
-    struct node* left;
+    struct node *right;
+    struct node *left;
 };
 
+struct node* search(struct node *root, int x) {
+    if(root == NULL || root->data == x)
+        return root;
+    else if(x > root->data)
+        return search(root->right, x);
+    else
+        return search(root->left, x);
+}
+
+struct node* find_minimum(struct node *root) {
+    if(root == NULL)
+        return NULL;
+    else if(root->left != NULL)
+        return find_minimum(root->left);
+    return root;
+}
+
 struct node* new_node(int x) {
-    struct node *p = (struct node*)malloc(sizeof(struct node));
+    struct node *p;
+    p = (struct node*)malloc(sizeof(struct node));
     p->data = x;
     p->left = NULL;
     p->right = NULL;
     return p;
 }
 
-struct node* insert(struct node* root, int x) {
-    if (root == NULL) 
+struct node* insert(struct node *root, int x) {
+    if(root == NULL)
         return new_node(x);
-    if (x > root->data) 
+    else if(x > root->data)
         root->right = insert(root->right, x);
-    else 
+    else
         root->left = insert(root->left, x);
     return root;
 }
 
-struct node* search(struct node* root,int x){
-    if(root==NULL||root->data==x) return root;
-    else if(x>root->data) return search(root->right,x);
-    else return search(root->left,x);
+struct node* del(struct node *root, int x) {
+    if(root == NULL)
+        return NULL;
+    if(x > root->data)
+        root->right = del(root->right, x);
+    else if(x < root->data)
+        root->left = del(root->left, x);
+    else {
+        // No Children
+        if(root->left == NULL && root->right == NULL) {
+            free(root);
+            return NULL;
+        }
+        // One Child
+        else if(root->left == NULL || root->right == NULL) {
+            struct node *temp;
+            if(root->left == NULL)
+                temp = root->right;
+            else
+                temp = root->left;
+            free(root);
+            return temp;
+        }
+        // Two Children
+        else {
+            struct node *temp = find_minimum(root->right);
+            root->data = temp->data;
+            root->right = del(root->right, temp->data);
+        }
+    }
+    return root;
 }
 
-void inorder(struct node* root) {
-    if (root != NULL) {
+void inorder(struct node *root) {
+    if(root != NULL) {
         inorder(root->left);
-        printf("%d ", root->data);
+        printf(" %d ", root->data);
         inorder(root->right);
     }
 }
 
-void postorder(struct node* root) {
-    if (root != NULL) {
-        postorder(root->left);
-        postorder(root->right);
-        printf("%d ", root->data);
-    }
-}
-
-void preorder(struct node* root) {
-    if (root != NULL) {
-        printf("%d ", root->data);
+void preorder(struct node *root) {
+    if(root != NULL) {
+        printf(" %d ", root->data);
         preorder(root->left);
         preorder(root->right);
     }
 }
 
-int main() {
-    struct node *root = NULL;
-    int ch, x;
+void postorder(struct node *root) {
+    if(root != NULL) {
+        postorder(root->left);
+        postorder(root->right);
+        printf(" %d ", root->data);
+    }
+}
 
-    printf("\nEnter root data to insert: ");
+int main() {
+    struct node *root, *t;
+    int ch, x, a;
+    printf("\nEnter the data to insert: ");
     scanf("%d", &x);
     root = new_node(x);
+    printf("\n1. Insertion\n2. Inorder\n3. Preorder\n4. Postorder\n5. Deletion\n6. Search\n7. Exit");
 
-    printf("\n1. Insertion\n2. Inorder\n3. Preorder\n4. Postorder\n5. Search\n6. Exit\n");
-    while (1) {
-        printf("Enter the choice: ");
+    while(1) {
+        printf("\nEnter your choice: ");
         scanf("%d", &ch);
-        switch (ch) {
+        switch(ch) {
             case 1:
-                printf("Enter the data: ");
+                printf("\nEnter the root data to insert: ");
                 scanf("%d", &x);
-                root = insert(root, x);
+                insert(root, x);
                 break;
             case 2:
-                printf("\nInorder Traversal: ");
+                printf("\nInorder traversal:\n");
                 inorder(root);
                 printf("\n");
                 break;
             case 3:
-                printf("\nPreorder Traversal: ");
+                printf("\nPreorder traversal:\n");
                 preorder(root);
                 printf("\n");
                 break;
             case 4:
-                printf("\nPostorder Traversal: ");
+                printf("\nPostorder traversal:\n");
                 postorder(root);
                 printf("\n");
                 break;
             case 5:
-                printf("Enter the value to search: ");
-                scanf("%d", &x);
-                struct node* result = search(root, x);
-                if (result != NULL) printf("Value %d found in the tree\n", x);    
-                else printf("Value %d not found in the tree\n", x);
+                printf("\nDeletion:\n");
+                printf("\nEnter the element to be deleted: ");
+                scanf("%d", &a);
+                root = del(root, a);
                 break;
             case 6:
-                exit(0);
-            default:
-                printf("Invalid Choice\n");
+                printf("\nEnter the element to search: ");
+                scanf("%d", &x);
+                t = search(root, x);
+                if(t == NULL)
+                    printf("\nElement not found!!\n");
+                else
+                    printf("\nElement found!!\n");
                 break;
+            case 7:
+                exit(0);
         }
     }
+    return 0;
 }
