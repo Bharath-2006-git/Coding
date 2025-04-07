@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <windows.h>  // For Sleep() and UTF-8 support
+#include <windows.h>  
 
 #define MAX 100
 
@@ -118,7 +118,7 @@ void printRoad(Road *r) {
 }
 
 int main() {
-    SetConsoleOutputCP(CP_UTF8);  // Enable UTF-8 for emoji output
+    SetConsoleOutputCP(CP_UTF8);  
 
     Road trafficRoad;
     initRoad(&trafficRoad);
