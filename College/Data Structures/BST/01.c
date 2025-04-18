@@ -103,7 +103,7 @@ void postorder(struct node *root) {
 int main() {
     struct node *root, *t, *minNode;
     int ch, x, a;
-    printf("\nEnter the data to insert: ");
+    printf("\nEnter the root data to insert: ");
     scanf("%d", &x);
     root = new_node(x);
     printf("\n1. Insertion\n2. Inorder\n3. Preorder\n4. Postorder\n5. Deletion\n6. Search\n7. Find Minimum\n8. Exit");
@@ -113,7 +113,7 @@ int main() {
         scanf("%d", &ch);
         switch(ch) {
             case 1:
-                printf("\nEnter the root data to insert: ");
+                printf("\nEnter the data to insert: ");
                 scanf("%d", &x);
                 root = insert(root, x);
                 break;
