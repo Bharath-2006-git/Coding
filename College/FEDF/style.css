@@ -1,0 +1,94 @@
+.page1{
+    background-color: rgb(244, 231, 231);
+    border-radius: 10px;
+    border: 5px solid maroon;
+    margin: 1px 10px 10px 10px;
+    padding: 20px;
+}
+.page1 h1{
+    text-align: center;
+    color: black;
+    font-family:'Times New Roman', Times, serif;
+}
+
+.page1 p{
+    text-align: justify;
+    font-size: 20px;
+    color: black;
+    font-family: Arial, sans-serif;
+}
+
+.page2{
+    text-align: center;
+    background-color: rgb(255, 231, 185);
+    width: 400px;
+    margin: auto;
+    border: 5px solid orange;
+    margin: 1px 10px 10px 10px;
+
+}
+
+.page2 h1{
+    text-align: center;
+    color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.page2 p{
+    text-align: justify;
+    font-size: 20px;
+    color: black;
+    font-family:'Times New Roman', Times, serif;
+    padding: 10px;
+    
+}
+
+header{
+    background-color: orange;
+    padding: 10px;
+    text-align: right;
+    font-size: larger;
+}
+
+header h1{
+    background-color: maroon;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 7px 12px;
+    display: inline-block;
+    border-radius: 20px;
+
+}
+ nav ul{
+    list-style-type: none;
+    margin: 5px;
+    padding: 10px;
+    overflow: hidden;
+
+ }
+nav li{
+    float: left;
+    margin-right: 10px;
+}
+
+nav a{ 
+    display: inline-block;
+    color: black;
+    text-align: justify;
+    padding: 5px 5px;
+    margin: 5px 10px 5px 10px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: red
+}
+
+footer{
+    background-color: maroon;
+    text-align: center;
+    font-size: xx-small;
+    color: white;
+    padding: 7px;
+
+}
